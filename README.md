@@ -24,9 +24,17 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What problem does the context API help solve?
+Allows and easier way for child components to access data stored in parents and minimizes the need for prop drilling
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+actions are how we update our state and they specify to the reducers how to update state when the actions are dispatched. reducers are pure functions that take in data and return a single value and they do all the work in a redux application. the store holds state for the entire application and it is immutable.
+
 3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
+component state is only accessible in the component is located in while application state is global.
+
 4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object.That function receives the store's dispatch method, which is then used to dispatch regular synchronous actions inside the body of the function once the asynchronous operations have completed.
+
 5. What is your favorite state management system you've learned and this sprint? Please explain why!
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
@@ -35,9 +43,9 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] `fork & clone` this repository.
-- [ ] `cd` into the forked copy of this repository.
-- [ ] **RUN** `npm install` to retrieve all `server-side` the dependencies.
+- [X] `fork & clone` this repository.
+- [X] `cd` into the forked copy of this repository.
+- [X] **RUN** `npm install` to retrieve all `server-side` the dependencies.
 - [ ] **RUN** `npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
 - [ ] After your API is up and running, you can open chrome and type in `http://localhost:3333/smurfs`. You should see an array with one smurf in it returned to you. This is an array that your **API** will be using to store our Smurf Data.
 - [ ] **LOOK** at your `smurfs` directory and notice it's just a plain ol' React App that we've built using `create-react-app`.

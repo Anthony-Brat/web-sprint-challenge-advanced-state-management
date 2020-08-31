@@ -1,3 +1,5 @@
+import { ADD_SMURF, FETCH_SMURFS } from "../actions/index"
+
 
 const initialState ={
     smurfs: []

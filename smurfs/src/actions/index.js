@@ -9,7 +9,7 @@ export const addSmurf = (smurfData) =>{
     }
 }
 
-export const fetchSmurf = () => dispatch =>{
+export const fetchSmurfs = () => dispatch =>{
     axios.get("http://localhost:3333/smurfs")
     .then(res =>{
         console.log("fetchSmurf action", res.data)

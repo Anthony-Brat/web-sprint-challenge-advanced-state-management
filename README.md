@@ -24,10 +24,22 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What problem does the context API help solve?
+Minimizes the need for prop drilling by allowing and easier way for child components to access data stored in parents
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+Actions are how we update our state and they specify to the reducers how to update state when the actions are dispatched.
+Reducers are pure functions that take in data and return a single value and they do all the work in a redux application.
+Store holds state for the entire application and is is immutable.
+
 3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
+Component state is only accessible in the component it is located in while application state is global. 
+
+
 4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object.That function receives the store's dispatch method, which is then used to dispatch regular synchronous actions inside the body of the function once the asynchronous operations have completed.
+
 5. What is your favorite state management system you've learned and this sprint? Please explain why!
+Redux because it is easier to manage state.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -78,7 +90,7 @@ In your solution, it is essential that you follow best practices and produce cle
 
 ##### POST '/smurfs'
 
-- [ ] Design the functionality to add a smurf to the Smurf DB you'll need all three fields. `name`, `age`, and `height`.
+- [X] Design the functionality to add a smurf to the Smurf DB you'll need all three fields. `name`, `age`, and `height`.
 
 Example of the shape of data to be sent to the `POST` endpoint:
 
@@ -90,7 +102,7 @@ Example of the shape of data to be sent to the `POST` endpoint:
 }
 ```
 
-- [ ] Double check to make sure that a smurf is created correctly once your functionality is built out.
+- [X] Double check to make sure that a smurf is created correctly once your functionality is built out.
 
 Initially Brainey will be in the array, but it takes more than one smurf to make the village. Be sure to add a few smurfs to populate our smurf village.
 
